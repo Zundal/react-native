@@ -18,7 +18,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-
+interface Props {}
+interface State {}
 import {
   Colors,
   DebugInstructions,
@@ -53,13 +54,13 @@ const Section = ({children, title}): Node => {
   );
 };
 
-const App: () => Node = () => {
+class App extends React.Component<Props, State> {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-
+rendor(){
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
@@ -83,8 +84,8 @@ const App: () => Node = () => {
           </Section>
         </View>
       </ScrollView>
-    </SafeAreaView>
-  );
+      </SafeAreaView>
+  )};
 };
 
 const styles = StyleSheet.create({
