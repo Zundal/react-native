@@ -12,6 +12,7 @@
     * __tests__ 사용할 수 있도록
     * jest 사용명령어
     * 참조 사이트
+    * https://jestjs.io/
     * https://samslow.github.io/development/2020/09/02/reactnativeTesting/
         yarn test --coverage
 과제
@@ -20,4 +21,5 @@
 # react native navigation
     https://reactnavigation.org/
 # react native structure
+    https://medium.com/habilelabs/best-folder-structure-for-react-native-project-a46405bdba7
     https://medium.com/@ifubabz/react-native-02-project-%EA%B5%AC%EC%A1%B0-%EC%84%A4%EA%B3%84-dae5196ba3f4
