@@ -10,5 +10,8 @@
 
 2021/10/21 TDD 테스트 자동화 테스트
     * __tests__ 사용할 수 있도록
-
+    * jest 사용명령어
+    * 참조 사이트
+    * https://samslow.github.io/development/2020/09/02/reactnativeTesting/
+        yarn test --coverage
 과제
