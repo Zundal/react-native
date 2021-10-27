@@ -3,51 +3,49 @@ import React from 'react';
 import { createStore } from 'redux';
 import { Provider as ReduxProvider } from 'react-redux';
 import type { Action } from 'redux';
+
+export type User ={
+  name    :string,
+  email   :string,
+  password:string
+}
 export type AppState = {
-  test1 : true,
-  test2 : true
+  loggedIn : boolean,
+  IoggedUser : User
 };
-// const rootReducer = {state}
-// const test = createStore(reducer);
+
+const initialState: AppState = {
+  loggedIn : false,
+  IoggedUser : {name : '', email:'', password:''}
+}
+const rootReducer = ( state:AppState=initialState, action: Action) => state
+const store = createStore(rootReducer);
 
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-export type Props = {
-  name                : string;
-  baseEnthusiasmLevel?: number;
-};
 
-const Hello: React.FC<Props> = ({
-  name,
-  baseEnthusiasmLevel = 0
-  }) => {
-  
-  const [enthusiasmLevel, setEnthusiasmLevel] = React.useState( baseEnthusiasmLevel );
-  const onIncrement = () => setEnthusiasmLevel( enthusiasmLevel + 1) ;
-  const onDecrement = () => setEnthusiasmLevel( enthusiasmLevel > 0 ? enthusiasmLevel - 1 : 0 );
-  const getExclamationMarks = (numChars: number) => numChars > 0 ? Array(numChars + 1).join('!') : '';
+function App() {
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.greeting}>
-        test Hello {name}
-        {getExclamationMarks(enthusiasmLevel)}
-      </Text>
-      <View>
-        <Button
-          title="Increase enthusiasm"
-          accessibilityLabel="increment"
-          onPress={onIncrement}
-          color="blue"
-        />
-        <Button
-          title="Decrease enthusiasm"
-          accessibilityLabel="decrement"
-          onPress={onDecrement}
-          color="red"
-        />
+    <ReduxProvider store={store}>
+      <View style={styles.container}>
+        <Text style={styles.greeting}>
+          
+        </Text>
+        <View>
+          <Button
+            title="Increase enthusiasm"
+            accessibilityLabel="increment"
+            color="blue"
+          />
+          <Button
+            title="Decrease enthusiasm"
+            accessibilityLabel="decrement"
+            color="red"
+          />
+        </View>
       </View>
-    </View>
+    </ReduxProvider>
   );
 };
 
@@ -64,4 +62,4 @@ const styles = StyleSheet.create({
   }
 });
   
-export default Hello;
+export default App;
