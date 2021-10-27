@@ -53,7 +53,11 @@ redux
 리덕스 생에주기
     1. https://blog.daum.net/followyourdream/10086852
 
-
 폰기종
     갤럭시 s21
+    갤럭시 s1
+    아이폰 xs
     아이폰 13
+
+고민 
+    1. 네비게이터 관리를 어떻게 해야하나?

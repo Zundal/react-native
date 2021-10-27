@@ -1,8 +1,12 @@
 import React from 'react';
-import { createStore } from 'redux';
+
+import { createStore, applyMiddleware } from 'redux';
 import { Provider as ReduxProvider } from 'react-redux';
 import type { Action } from 'redux';
 import { Button, StyleSheet, Text, View } from 'react-native';
+import myLogger from '../middlewares/logger';
+
+import { NavigationContainer } from '@react-navigation/native';
 
 export type User ={
   name    :string,
@@ -18,18 +22,19 @@ export type AppState = {
 const initialState: AppState = {
   loggedIn : false,
   IoggedUser : {
-    name : '', 
-    email:'', 
-    password:''
+    name    : '', 
+    email   : '', 
+    password: ''
   }
 }
 
 const rootReducer = ( state:AppState=initialState, action: Action ) => state
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(myLogger));
 
 function App() {
   return (
     <ReduxProvider store={store}>
+      
       <View style={styles.container}>
         <Text style={styles.greeting}>
           
@@ -47,6 +52,7 @@ function App() {
           />
         </View>
       </View>
+      
     </ReduxProvider>
   );
 };
@@ -63,5 +69,5 @@ const styles = StyleSheet.create({
     margin        : 16
   }
 });
-  
+
 export default App;
