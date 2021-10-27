@@ -24,9 +24,7 @@ const initialState: AppState = {
   }
 }
 
-const rootReducer = ( 
-  state:AppState=initialState, action: Action
-) => state
+const rootReducer = ( state:AppState=initialState, action: Action ) => state
 const store = createStore(rootReducer);
 
 function App() {

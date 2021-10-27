@@ -52,3 +52,8 @@ redux
 
 리덕스 생에주기
     1. https://blog.daum.net/followyourdream/10086852
+
+
+폰기종
+    갤럭시 s21
+    아이폰 13
