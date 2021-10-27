@@ -1,14 +1,15 @@
 import React from 'react';
-
 import { createStore } from 'redux';
 import { Provider as ReduxProvider } from 'react-redux';
 import type { Action } from 'redux';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export type User ={
   name    :string,
   email   :string,
   password:string
 }
+
 export type AppState = {
   loggedIn : boolean,
   IoggedUser : User
@@ -16,16 +17,19 @@ export type AppState = {
 
 const initialState: AppState = {
   loggedIn : false,
-  IoggedUser : {name : '', email:'', password:''}
+  IoggedUser : {
+    name : '', 
+    email:'', 
+    password:''
+  }
 }
-const rootReducer = ( state:AppState=initialState, action: Action) => state
+
+const rootReducer = ( 
+  state:AppState=initialState, action: Action
+) => state
 const store = createStore(rootReducer);
 
-import { Button, StyleSheet, Text, View } from 'react-native';
-
-
 function App() {
-
   return (
     <ReduxProvider store={store}>
       <View style={styles.container}>
