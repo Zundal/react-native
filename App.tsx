@@ -1,4 +1,9 @@
 import React from 'react';
+
+import { createStore } from 'redux';
+import { Provider as ReduxProvider } from 'react-redux';
+import type { Action } from 'redux';
+
 import { Button, StyleSheet, Text, View } from 'react-native';
 
 export type Props = {
