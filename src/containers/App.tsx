@@ -4,8 +4,9 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider as ReduxProvider } from 'react-redux';
 import type { Action } from 'redux';
 
-import myLogger from '../middlewares/logger';
-
+//import myLogger from '../middlewares/logger';
+import logger from 'redux-logger';
+import { composeWithDevTools }from 'redux-devtools-extension';
 import Intro from './Intro';
 
 export type User ={
@@ -29,9 +30,13 @@ const initialState: AppState = {
 }
 
 const rootReducer = ( state:AppState=initialState, action: Action ) => state
-const store = createStore(rootReducer, applyMiddleware(myLogger));
+const store = createStore(
+  rootReducer, 
+  composeWithDevTools(applyMiddleware(logger))
+);
 
 function App() {
+  console.log(store);
   return (
     <ReduxProvider store={store}>
       

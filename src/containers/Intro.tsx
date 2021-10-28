@@ -1,30 +1,28 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Stack from '../navigation/Stack';
 
 function Intro() {
     return (
-
-        <View style={styles.container}>
-        
+    <SafeAreaView>
+        <Text>test</Text>
         <Stack/>
-
-        <Text style={styles.greeting}>
-
-        </Text>
+        <Text>test</Text>
         <View>
-            <Button
-                title="Increase enthusiasm"
-                accessibilityLabel="increment"
-                color="blue"
+            <View>
+                <Button
+                    title="Increase enthusiasm"
+                    accessibilityLabel="increment"
+                    color="blue"
+                    />
+                <Button
+                    title="Decrease enthusiasm"
+                    accessibilityLabel="decrement"
+                    color="red"
                 />
-            <Button
-                title="Decrease enthusiasm"
-                accessibilityLabel="decrement"
-                color="red"
-            />
+            </View>
         </View>
-        </View>
+    </SafeAreaView>
     )
 }
 

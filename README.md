@@ -70,3 +70,6 @@ redux
 
 # safe area 개념  
     https://blog.edit.kr/entry/Notch-%EB%85%B8%EC%B9%98-%EB%94%94%EC%9E%90%EC%9D%B8-React-Native%EC%97%90%EC%84%9C-SafeAreaView%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0  
+
+리덕스 미들웨어 디버그  
+    https://react.vlpt.us/redux-middleware/03-logger-and-devtools.html  

@@ -13,7 +13,7 @@ const Center: React.FC = ({ children }) => { //컴포넌트를 가운데 정렬�
     )
 }
 
-const Routes: React.FC = () => {
+const Stacks: React.FC = () => {
     return (
         <SafeAreaProvider>
             <NavigationContainer>
@@ -46,4 +46,4 @@ function About() {
     )
 }
 
-export default Routes;
+export default Stacks;
