@@ -1,3 +1,4 @@
+// XXX 지울 소스 사용하지 않는 소스입니다.
 const myLogger = store => next => action => {
     console.log(action);            // 먼저 액션을 출력합니다.
     const result = next(action);    // 다음 미들웨어 (또는 리듀서) 에게 액션을 전달합니다.

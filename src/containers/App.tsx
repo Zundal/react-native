@@ -1,12 +1,15 @@
 import React from 'react';
 
+// redux store
 import { createStore, applyMiddleware } from 'redux';
 import { Provider as ReduxProvider } from 'react-redux';
 import type { Action } from 'redux';
 
-//import myLogger from '../middlewares/logger';
+// debugger
 import logger from 'redux-logger';
 import { composeWithDevTools }from 'redux-devtools-extension';
+
+// init 패이지
 import Intro from './Intro';
 
 export type User ={
@@ -29,23 +32,23 @@ const initialState: AppState = {
   }
 }
 
-const rootReducer = ( state:AppState=initialState, action: Action ) => state
+const rootReducer = ( 
+  state:AppState=initialState, 
+  action: Action 
+) => state
+
 const store = createStore(
   rootReducer, 
   composeWithDevTools(applyMiddleware(logger))
 );
 
-function App() {
+const App : React.FC = () =>  {
   console.log(store);
   return (
     <ReduxProvider store={store}>
-      
       <Intro/>
-
     </ReduxProvider>
   );
 };
-
-
 
 export default App;
