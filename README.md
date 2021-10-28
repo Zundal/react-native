@@ -35,35 +35,38 @@ npm과 npx 의 차이
     npx의 필요성
         1. create-react-app 과 같은 보일러 플레이트 모듈에 효과적
 
-redux 
-    1. 리덕스는 리액트와 리액트 네이티브 앱 개발에 사용하는 앱 상태관리 라이브러리
-    2. 리덕스는 플럭스 규격에서 출발 했다
-    3. 리덕스 필수 라이브러리는
-       1. redux
-       2. react-redux
-    4. 추가 라이브러리
-       1. redux-thunk
-       2. redux-logger
-       3. redux-saga
-       4. redux-observable
+redux  
+    1. 리덕스는 리액트와 리액트 네이티브 앱 개발에 사용하는 앱 상태관리 라이브러리  
+    2. 리덕스는 플럭스 규격에서 출발 했다  
+    3. 리덕스 필수 라이브러리는  
+       1. redux  
+       2. react-redux  
+    4. 추가 라이브러리  
+       1. redux-thunk  
+       2. redux-logger  
+       3. redux-saga  
+       4. redux-observable  
 
-어플리케이션 상태
-    페이지가 가지고 있는 상태값을 나타낸다
+어플리케이션 상태  
+    페이지가 가지고 있는 상태값을 나타낸다  
 
-리덕스 생에주기
-    1. https://blog.daum.net/followyourdream/10086852
+리덕스 생에주기  
+    1. https://blog.daum.net/followyourdream/10086852  
 
-폰기종
-    갤럭시 s21
-    갤럭시 s1
-    아이폰 xs
-    아이폰 13
+폰기종  
+    갤럭시 s21  
+    갤럭시 s1  
+    아이폰 xs  
+    아이폰 13  
 
-고민 
-    1. 네비게이터 관리를 어떻게 해야하나?
+고민  
+    1. 네비게이터 관리를 어떻게 해야하나?  
 
 # 같이 처리해야할 앱 과제
     1. 테스트 프레임 워크 설정하기  
     2. 리덕스 설정하기  
     3. 리덕스 청크 설정하기  
     4. 리덕스 사가 설정하기  
+
+# safe area 개념  
+    https://blog.edit.kr/entry/Notch-%EB%85%B8%EC%B9%98-%EB%94%94%EC%9E%90%EC%9D%B8-React-Native%EC%97%90%EC%84%9C-SafeAreaView%EB%A1%9C-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0  

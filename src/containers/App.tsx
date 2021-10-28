@@ -3,10 +3,10 @@ import React from 'react';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider as ReduxProvider } from 'react-redux';
 import type { Action } from 'redux';
-import { Button, StyleSheet, Text, View } from 'react-native';
+
 import myLogger from '../middlewares/logger';
 
-import { NavigationContainer } from '@react-navigation/native';
+import Intro from './Intro';
 
 export type User ={
   name    :string,
@@ -35,39 +35,12 @@ function App() {
   return (
     <ReduxProvider store={store}>
       
-      <View style={styles.container}>
-        <Text style={styles.greeting}>
-          
-        </Text>
-        <View>
-          <Button
-            title="Increase enthusiasm"
-            accessibilityLabel="increment"
-            color="blue"
-          />
-          <Button
-            title="Decrease enthusiasm"
-            accessibilityLabel="decrement"
-            color="red"
-          />
-        </View>
-      </View>
-      
+      <Intro/>
+
     </ReduxProvider>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex          : 1,
-    alignItems    : 'center',
-    justifyContent: 'center'
-  },
-  greeting: {
-    fontSize      : 20,
-    fontWeight    : 'bold',
-    margin        : 16
-  }
-});
+
 
 export default App;
