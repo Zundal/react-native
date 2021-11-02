@@ -1,3 +1,5 @@
+# jest 오류 확인  
+    
 # 리엑트 네이티브 폴더 트리 참고자료
     https://samanw.medium.com/reactnative-best-practices-with-best-folder-structure-6d2716d3d9cb
 
@@ -73,3 +75,19 @@ redux
 
 리덕스 미들웨어 디버그  
     https://react.vlpt.us/redux-middleware/03-logger-and-devtools.html  
+
+FBRectNativeSpec 에러
+
+nvm Node Version Manager
+    NVM을 사용하지 않고 설치한 Node는 /usr/local/bin/ 경로
+    NVM을 사용하여 설치했을 경우에는 /User/kimjongmin/.nvm/versions/node/ 경로
+
+ll /usr/local/bin/ | grep node
+    lrwxr-xr-x  1 [username]   admin    30B Jul 24 00:32 node -> ../Cellar/node/16.5.0/bin/node
+    lrwxr-xr-x  1 [username]   admin    46B Jul 24 00:32 npm -> /usr/local/lib/node_modules/npm/bin/npm-cli.js
+    lrwxr-xr-x  1 [username]   admin    46B Jul 24 00:32 npx -> /usr/local/lib/node_modules/npm/bin/npx-cli.js
+    lrwxr-xr-x  1 [username]   admin    45B Jun 23 21:47 react-native -> ../lib/node_modules/react-native-cli/index.js
+
+NVM을 사용했을 경우 사용자의 종속되어 설치되기 때문에 npm을 통하여 모듈을 설치할 때도 기존과는 달리 -g 옵션을 주지 않아도 설치 가능합니다. (npm또한 Node와 같이 설치되기 때문에 Node 버전마다 다르게 설치됩니다.
+NVM 설치
+    NVM 설치전 기존에 설치되어 있던 Node를 제거하는것을 권장하지만 NVM 설치 후 제거하여도 괜찮습니다.
